@@ -1,0 +1,72 @@
+﻿<Window x:Class="WpfApp10.Selected_Product_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp10"
+        mc:Ignorable="d"
+         Icon="Resources\kristal.png"
+       Title="Pendants" Height="550" Width="640" ResizeMode="NoResize" Background="White">
+    <Grid>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.9*"></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Column="0" Margin="0 0 20 0" Source="Resources\kristal.png" Width="70" Height="60" HorizontalAlignment="Right"></Image>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0"   Height="250" Width="250"  Source="{Binding Image_product }" HorizontalAlignment="Center" ></Image>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="1.3*"></RowDefinition>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="1.2*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Grid.Column="1">
+                       
+                        <TextBlock FontSize="20"  Text="{Binding name}" x:Name="TextName" FontWeight="Bold"   ></TextBlock>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="2">
+                        <StackPanel>
+                            <TextBlock Text="О П И С А Н И Е" FontWeight="Bold"   ></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" TextAlignment="Left"   Text="{Binding description}" x:Name="TextDescription"  ></TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="2">
+                        <StackPanel>
+                            <TextBlock Text="Ц Е Н А" FontWeight="Bold" ></TextBlock>
+                        <TextBlock Text="{Binding cost, StringFormat={}Цена: {0}₽}" x:Name="TextCost"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="4" Grid.Column="2">
+                        <StackPanel>
+                            <TextBlock Text="Р А З М Е Р Ы" FontWeight="Bold" ></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" TextAlignment="Left"  Text="{Binding dimensions}" x:Name="TextDemintions"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Row="3" Grid.Column="2">
+                        <StackPanel>
+                            <TextBlock Text="М А Т Е Р И А Л" FontWeight="Bold"  ></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" TextAlignment="Left"  Text="{Binding product_material}" x:Name="TextMaterial" ></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Button x:Name="Korzina" Click="Korzina_Click" Content="Добавить в корзину"></Button>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

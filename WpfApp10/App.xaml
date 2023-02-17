@@ -1,0 +1,60 @@
+﻿<Application x:Class="WpfApp10.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfApp10"
+             StartupUri="Authorization_Window.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="#FF5F4E4E" />
+            <!--<Setter Property="BorderBrush" Value="Black"></Setter>
+            <Setter Property="BorderThickness" Value="0.5"></Setter>-->
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Width" Value="200"></Setter>
+            <Setter Property="Height" Value="35"></Setter>
+            <Setter Property="FontFamily" Value="Book Antiqua" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="Margin" Value="5"></Setter>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                                Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="0.5">
+
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Label" >
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Book Antiqua"></Setter>
+            <Setter Property="Foreground" Value="#FF5F4E4E"></Setter>
+            <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Book Antiqua" />
+            <Setter Property="Foreground" Value="#FF5F4E4E" />
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Book Antiqua" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Width" Value="230"></Setter>
+            <Setter Property="Height" Value="20"></Setter>
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Opacity" Value="0.5"/>
+            <Setter Property="BorderBrush" Value="Black" />
+
+        </Style>
+    </Application.Resources>
+</Application>
